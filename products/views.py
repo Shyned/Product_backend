@@ -42,7 +42,8 @@ def product_details(request,pk):
         return Response(serializer.data)
 
     elif request.method == 'DELETE':
-        pass
+        product.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 
